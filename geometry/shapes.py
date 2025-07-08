@@ -27,3 +27,17 @@ class Circle(Shape):
     
     def area(self) -> float:
         return math.pi * self.radius ** 2
+
+class Rectangle(Shape):
+    def __init__(self, length: float, width: float):
+        if not isinstance(length, (int, float)):
+            raise ValueError("Length must be numeric.")
+        if not isinstance(width, (int, float)):
+            raise ValueError("Width must be numeric.")
+        super().__init__()
+        self.length = length
+        self.width = width
+    
+    def area(self) -> float:
+        return self.length * self.width
+    
