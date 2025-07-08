@@ -1,10 +1,10 @@
-from geometry import Circle, Square, area_stats
+from geometry import Circle, Square, Rectangle, area_stats
 
 # Construct a square with side length 4:
 square = Square(4)
 
 # Shapes can also have non-integer side lengths:
-square2 = Square(6.4)
+rectangle = Rectangle(6.5, 3)
 
 # Construct a circle:
 circle = Circle(3.2)
@@ -13,4 +13,4 @@ circle = Circle(3.2)
 print(circle.area())
 
 # Print a summary of the areas of all three shapes:
-print(area_stats(square, square2, circle))
+print(area_stats(square, rectangle, circle))
